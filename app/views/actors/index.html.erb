@@ -1,0 +1,8 @@
+<h1>The Actors</h1>
+
+<% @actors.each do |actor| %>
+  <div>
+ <h3><%= actor.first_name %>" "<%= actor.last_name %></h3>
+ <%= link_to actor.role, actor_path(actor) %>
+  </div><br>
+  <% end %>
