@@ -23,9 +23,16 @@ class ActorsController < ApplicationController
   end 
 
   def edit
+    @actor = Actor.find_by(id: params[:id])
   end
 
   def update 
+    @actor = Actor.find_by(id: params[:id])
+    if @actor.update(actor_params)
+      redirect_to actor_path(@actor)
+    else
+      render :edit
+    end
   end
 
   def destroy 
