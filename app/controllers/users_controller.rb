@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index 
+    #no need for a users list 
   end
 
   def new
@@ -20,13 +21,17 @@ class UsersController < ApplicationController
   def show 
     @user = User.find_by(id: params[:id])
 
+    #will also display all user's shows on this view page
+
   end 
 
-  def edit
-  end
+  #are these methods needed? I don't think so.
+  # def edit
+  #   
+  # end
 
-  def update 
-  end
+  # def update 
+  # end
 
  
 
