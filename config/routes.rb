@@ -5,8 +5,8 @@ Rails.application.routes.draw do
  get '/login' => 'sessions#new'
  post '/login' => 'sessions#create'
 
- get '/signup' => 'user#new'
- post '/signup' => 'user#create'
+ get '/signup' => 'users#new'
+ post '/signup' => 'users#create'
  
   resources :pieces
   resources :costumes
