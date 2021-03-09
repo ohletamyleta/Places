@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   has_many :shows
   
-  validates :name, presence: true 
-  validates :email, uniqueness: true
+  validates :name, :email, presence: true 
+  validates :name, :email, uniqueness: true
   has_secure_password
 
   
