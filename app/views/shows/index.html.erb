@@ -1,0 +1,10 @@
+<h1>Your Shows </h1>
+
+<% @shows.each do |show| %>
+  <div>
+  <h3><%= link_to show.title, show_path(show) %> </h3>
+  <p> Dates: <%= show.start_date %> through <%= show.end_date %>
+  </div><br>
+  <% end %>
+
+  
