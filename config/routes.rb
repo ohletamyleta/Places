@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+ 
+ root 'sessions#index'
+ 
   resources :pieces
   resources :costumes
   resources :actors
