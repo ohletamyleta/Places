@@ -1,0 +1,17 @@
+<%= form_for @show do |f| %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+<br></br>
+
+<%= f.label :start_date, "Start Date MM/DD/YY" %>
+<%= f.text_field :start_date %>
+<br></br>
+
+<%= f.label :end_date, "End Date MM/DD/YY" %>
+<%= f.text_field :end_date %>
+<br></br>
+
+<%= f.submit "Create Show" %>
+
+<% end %>
