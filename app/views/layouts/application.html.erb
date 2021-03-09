@@ -9,9 +9,26 @@
   </head>
 
   <body>
-
+  <br>
+  <br>
+  <br>
+  <% if logged_in? %>
+  <nav class='navbar'>
+       <%= link_to 'My Shows', shows_path , class:'button'%>
+    <%= link_to 'Add a Show', new_show_path , class:'button'%>
+    <%= link_to 'Add an Actor', new_actor_path, class:'button'%>
+    <%= link_to 'Add a costume piece', new_piece_path , class:'button'%>
+    <%= link_to 'All Costume Pieces', pieces_path, class:'button' %>
+    <%= link_to 'Build a Costume', new_costume_path, class:'button' %>
+    <%= link_to 'My Costumes', costumes_path, class:'button' %>
+    <%= link_to 'Logout', '/logout', method: :delete, class:'button'%>
+  </nav>
+  <% else %>
+    <%= link_to 'Log In', login_path %>
+  <% end %>
+  <div class='container'>
  
     <%= yield %>
   </body>
-  <%= link_to 'Logout', '/logout', method: :delete %>
+
 </html>
