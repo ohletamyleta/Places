@@ -33,7 +33,7 @@ class PiecesController < ApplicationController
   private
 
   def piece_params
-    params.require(:piece).permit(:name, :tag_number, :type, :color, :fabric, :time_period, :ok_to_alter, :storage_location, :cleaning_method, :notes,
+    params.require(:piece).permit(:name, :tag_number, :category, :color, :fabric, :time_period, :ok_to_alter, :storage_location, :cleaning_method, :notes,
       :waist, :hip, :shoulder_to_shoulder, :chest, :neck, :neck_to_waist, :waist_to_hem, :sleeve_length, :inseam, :tag_size)
   end 
 
