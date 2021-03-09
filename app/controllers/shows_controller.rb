@@ -19,13 +19,20 @@ class ShowsController < ApplicationController
 
   def show 
     @show = Show.find_by(id: params[:id])
-    
+
   end 
 
   def edit
+    @show = Show.find_by(id: params[:id])
   end
 
   def update 
+    @show = Show.find_by(id: params[:id])
+    if @show.update(show_params)
+      redirect_to show_path(@show)
+    else
+      render :edit
+    end
   end
 
   def destroy 
