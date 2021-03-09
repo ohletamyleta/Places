@@ -19,6 +19,7 @@ class ActorsController < ApplicationController
 
   def show 
     @actor = Actor.find_by(id: params[:id])
+    #need to nest this under show controller?
   end 
 
   def edit
