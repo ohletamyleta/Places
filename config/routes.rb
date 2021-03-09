@@ -2,6 +2,12 @@ Rails.application.routes.draw do
  
  root 'sessions#index'
  
+ get '/login' => 'sessions#new'
+ post '/login' => 'sessions#create'
+
+ get '/signup' => 'user#new'
+ post '/signup' => 'user#create'
+ 
   resources :pieces
   resources :costumes
   resources :actors
