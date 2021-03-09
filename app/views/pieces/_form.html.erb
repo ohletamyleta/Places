@@ -1,0 +1,67 @@
+<%= form_for @piece do |f| %>
+
+<%= f.label :name %>
+<%= %>
+<br>
+<%= f.label :tag_number%>
+<%= %>
+<br>
+<%= f.label :type %>
+<%= %>
+<br>
+<%= f.label :color %>
+<%= %>
+<br>
+<%= f.label :fabric%>
+<%= %>
+<br>
+<%= f.label :time_period %>
+<%= %>
+<br>
+<%= f.label :ok_to_alter %>
+<%= %>
+<br>
+<%= f.label :storage_location %>
+<%= %>
+<br>
+<%= f.label :cleaning_method %>
+<%= %>
+<br>
+<%= f.label :notes%>
+<%= %>
+<br>
+<h4>Record measurements of garment in inches:</h4>
+<br>
+<%= f.label :waist%>
+<%= %>
+<br>
+<%= f.label :hip%>
+<%= %>
+<br>
+<%= f.label :shoulder_to_shoulder %>
+<%= %>
+<br>
+<%= f.label :chest %>
+<%= %>
+<br>
+<%= f.label :neck %>
+<%= %>
+<br>
+<%= f.label :neck_to_waist%>
+<%= %>
+<br>
+<%= f.label :waist_to_hem %>
+<%= %>
+<br>
+<%= f.label :sleeve_length %>
+<%= %>
+<br>
+<%= f.label :inseam%>
+<%= %>
+<br>
+<%= f.label :tag_size %>
+<%= %>
+<br>
+
+<%= f.submit %>
+  <% end %>
