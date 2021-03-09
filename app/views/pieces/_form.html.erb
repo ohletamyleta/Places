@@ -1,66 +1,66 @@
 <%= form_for @piece do |f| %>
 
 <%= f.label :name %>
-<%= %>
+<%= f.text_field :name%>
 <br>
 <%= f.label :tag_number%>
-<%= %>
+<%=f.text_field :tag_number %>
 <br>
-<%= f.label :type %>
-<%= %>
+<%= f.label :category %>
+<%= f.select :category,options_for_select(["TOP", "BOTTOM", "FULL SUIT", "DRESS", "UNDERWEAR", "OUTERWEAR", "ACCESSORY"]), include_blank: false %>
 <br>
 <%= f.label :color %>
-<%= %>
+<%= f.select :color,options_for_select(["BLACK", "WHITE", "RED", "BLUE", "GREEN", "YELLOW", "ORANGE", "PURPLE", "PINK", "GRAY", "MULTI"]), include_blank: false  %>
 <br>
 <%= f.label :fabric%>
-<%= %>
+<%= f.text_field :fabric%>
 <br>
 <%= f.label :time_period %>
-<%= %>
+<%= f.text_field :time_period %>
 <br>
-<%= f.label :ok_to_alter %>
-<%= %>
+<%= f.label :ok_to_alter, "OK to alter Y/N" %>
+<%= f.text_field :ok_to_alter %>
 <br>
 <%= f.label :storage_location %>
-<%= %>
+<%= f.select :storage_location,options_for_select(["RACK", "UPSTAIRS ROOM", "EASTLAND", "BASEMENT", "OTHER (specify in notes)"]) %>
 <br>
 <%= f.label :cleaning_method %>
-<%= %>
+<%= f.text_field :cleaning_method %>
 <br>
 <%= f.label :notes%>
-<%= %>
+<%= f.text_area :notes%>
 <br>
 <h4>Record measurements of garment in inches:</h4>
 <br>
 <%= f.label :waist%>
-<%= %>
+<%= f.number_field :waist%>
 <br>
 <%= f.label :hip%>
-<%= %>
+<%= f.number_field :hip%>
 <br>
 <%= f.label :shoulder_to_shoulder %>
-<%= %>
+<%= f.number_field :shoulder_to_shoulder %>
 <br>
 <%= f.label :chest %>
-<%= %>
+<%= f.number_field :chest%>
 <br>
 <%= f.label :neck %>
-<%= %>
+<%= f.number_field :neck %>
 <br>
 <%= f.label :neck_to_waist%>
-<%= %>
+<%= f.number_field :neck_to_waist%>
 <br>
 <%= f.label :waist_to_hem %>
-<%= %>
+<%= f.number_field :waist_to_hem%>
 <br>
 <%= f.label :sleeve_length %>
-<%= %>
+<%= f.number_field :sleeve_length%>
 <br>
 <%= f.label :inseam%>
-<%= %>
+<%= f.number_field :inseam %>
 <br>
 <%= f.label :tag_size %>
-<%= %>
+<%= f.text_field :tag_size%>
 <br>
 
 <%= f.submit %>

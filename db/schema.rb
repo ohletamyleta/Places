@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_08_164207) do
+ActiveRecord::Schema.define(version: 2021_03_09_220355) do
 
   create_table "actors", force: :cascade do |t|
     t.string "first_name"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2021_03_08_164207) do
   create_table "pieces", force: :cascade do |t|
     t.string "name"
     t.integer "tag_number"
-    t.string "type"
     t.string "color"
     t.string "fabric"
     t.string "time_period"
@@ -54,6 +53,7 @@ ActiveRecord::Schema.define(version: 2021_03_08_164207) do
     t.string "tag_size"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "category"
   end
 
   create_table "shows", force: :cascade do |t|
@@ -75,4 +75,3 @@ ActiveRecord::Schema.define(version: 2021_03_08_164207) do
   end
 
 end
-
