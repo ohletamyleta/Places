@@ -1,9 +1,11 @@
 class CostumesController < ApplicationController
 
-  def index 
+  def index
+    @costume = Costume.all 
   end
 
   def new
+    @costume = Costume.new
   end
 
   def show 
@@ -11,6 +13,7 @@ class CostumesController < ApplicationController
   end 
 
   def edit
+    @costume = Costume.find(params[:id])
   end
 
   def update 
