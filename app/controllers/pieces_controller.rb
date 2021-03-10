@@ -23,9 +23,16 @@ class PiecesController < ApplicationController
   end 
 
   def edit
+    @piece = Piece.find_by(id: params[:id])
   end
 
   def update 
+    @piece= Piece.find_by(id: params[:id])
+    if @piece.update(piece_params)
+      redirect_to piece_path(@piece)
+    else
+      render :edit
+    end
   end
 
   def destroy 

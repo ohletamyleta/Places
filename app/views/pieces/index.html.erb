@@ -1,2 +1,13 @@
 <h1>Our Inventory Of Costume Pieces</h1>
 
+<% @pieces.each do |piece| %>
+  <div>
+  <h3><%= link_to piece.name, piece_path(piece) %> </h3>
+  <p><%= piece.category %></p>
+  <p><%= piece.color%> </p>
+  <p><%= piece.time_period %></p>
+  <p> piece.storage_location %></p>
+  <p> piece.storage_location %></p>
+  <p> piece.notes %></p>
+  </div><br>
+  <% end %>
