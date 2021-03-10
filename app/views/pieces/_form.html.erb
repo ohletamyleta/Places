@@ -7,10 +7,10 @@
 <%=f.text_field :tag_number %>
 <br>
 <%= f.label :category %>
-<%= f.select :category,options_for_select(["TOP", "BOTTOM", "FULL SUIT", "DRESS", "UNDERWEAR", "OUTERWEAR", "ACCESSORY"]), include_blank: false %>
+<%= f.select :category,options_for_select(["TOP", "BOTTOM", "FULL SUIT", "DRESS", "UNDERWEAR", "OUTERWEAR", "ACCESSORY"]) %>
 <br>
 <%= f.label :color %>
-<%= f.select :color,options_for_select(["BLACK", "WHITE", "RED", "BLUE", "GREEN", "YELLOW", "ORANGE", "PURPLE", "PINK", "GRAY", "MULTI"]), include_blank: false  %>
+<%= f.select :color,options_for_select(["BLACK", "WHITE", "RED", "BLUE", "GREEN", "YELLOW", "ORANGE", "PURPLE", "PINK", "GRAY", "MULTI"]) %>
 <br>
 <%= f.label :fabric%>
 <%= f.text_field :fabric%>
@@ -51,16 +51,16 @@
 <%= f.number_field :neck_to_waist%>
 <br>
 <%= f.label :waist_to_hem %>
-<%= f.number_field :waist_to_hem%>
+<%= f.number_field :waist_to_hem %>
 <br>
 <%= f.label :sleeve_length %>
-<%= f.number_field :sleeve_length%>
+<%= f.number_field :sleeve_length %>
 <br>
 <%= f.label :inseam%>
 <%= f.number_field :inseam %>
 <br>
 <%= f.label :tag_size %>
-<%= f.text_field :tag_size%>
+<%= f.text_field :tag_size %>
 <br>
 
 <%= f.submit %>

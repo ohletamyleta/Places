@@ -1,4 +1,14 @@
 <h1>Add a New Piece to the Costume Inventory!</h1>
+<% if @piece.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@piece.errors.count, "error") %> prohibited this piece from being saved:</h2>
 
+    <ul>
+      <% @piece.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <%= render 'form' %>
 
