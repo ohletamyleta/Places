@@ -7,5 +7,5 @@ class Actor < ApplicationRecord
   validates :last_name, presence: true
   validates :role, presence: true
 
-
+  scope :order_alpha, -> { order(last_name: :desc)}
 end
