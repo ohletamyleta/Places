@@ -31,6 +31,7 @@ class CostumesController < ApplicationController
       redirect_to costume_path(@costume)
     else
      render :edit
+    end
   end
 
   def destroy 
@@ -39,6 +40,6 @@ class CostumesController < ApplicationController
   private
 
     def costume_params
-      params.require(:cotume).permit(:show_id, :actor_id, :notes, :active, :costume_id)
+      params.require(:costume).permit(:show_id, :actor_id, :notes, :active, :costume_id)
     end 
 end
