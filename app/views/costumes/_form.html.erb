@@ -1,9 +1,11 @@
 <%= form_for @costume do |f| %>
 
-<%= f.label :placeholder %>
+<%= f.label :show %>
 <% f.collection_select :show_id, Show.all, :id, :title, include_blank: true %>
 
 <br></br>
+
+
 
 
 

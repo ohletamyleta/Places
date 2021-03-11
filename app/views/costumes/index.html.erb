@@ -1,1 +1,9 @@
 <h1>This list will be all of the constructed costumes</h1>
+
+<% @costumes.each do |costume| %>
+  <div>
+  <h3><%= link_to costume.name, costume_path(costume) %> </h3>
+  <p> Show: <%= costume.show.title %> 
+  <p> Character: <%= costume.actor.role %>
+  </div><br>
+  <% end %>
