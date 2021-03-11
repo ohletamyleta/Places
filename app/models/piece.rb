@@ -1,7 +1,11 @@
 class Piece < ApplicationRecord
   
-  has_many :shows, through: :costumes
-  has_many :actors, through: :costumes 
+  belongs_to :show
+  belongs_to :costume
+  
+  # changing relationships so this is the join table
+  # has_many :shows, through: :costumes
+  # has_many :actors, through: :costumes 
 
 #working on returning pieces by color or by category (using Scope Methods)
 
