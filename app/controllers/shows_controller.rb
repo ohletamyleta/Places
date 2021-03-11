@@ -1,7 +1,7 @@
 class ShowsController < ApplicationController
 
   def index 
-    @shows = current_user.shows
+    @shows = current_user.shows.order_alpha
   end
 
   def new
