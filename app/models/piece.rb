@@ -17,4 +17,5 @@ class Piece < ApplicationRecord
 # end
 
   
+
 end

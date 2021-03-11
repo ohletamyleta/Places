@@ -7,3 +7,4 @@ class Costume < ApplicationRecord
   scope :by_show, -> (show_id) {where("show_id = ?", show_id)}
   
 end
+
