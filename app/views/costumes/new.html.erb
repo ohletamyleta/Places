@@ -1,3 +1,27 @@
 <h1>Build a costume from pieces in inventory</h1>
 
-<% render 'form' %>
+<%= render partial: "layouts/errors", locals: { object: @costume } %>
+
+<%= form_for [@show,@costume] do |f| %>
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+  <%= f.label :feeling %>
+  <%= f.text_field :feeling %>
+
+  <br></br>
+
+  <%= f.label :race_id %>
+  <%= f.collection_select :race_id, current_user.races, :id, :title    %>
+
+  <br></br>
+
+  <%= show_form_option(f) %>
+  <%= f.submit%>
+<% end %>
+
+
+
+
+
+
+

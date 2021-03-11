@@ -1,9 +1,22 @@
-<%= form_for @costume do |f| %>
+<%= f.label :show_id, "Select a Show" %>
+  <% f.collection_select :show_id, Show.all, :id, :title, include_blank: true %>
 
-<%= f.label :show %>
-<% f.collection_select :show_id, Show.all, :id, :title, include_blank: true %>
+  <br></br>
 
-<br></br>
+<h3>Or add a new show:</h3>
+<%= render partial: "layouts/errors", locals: { object: @costume.show } %>
+
+
+<%= f.fields_for :show do |s| %>
+  <%= s.label :title %>
+  <%= s.text_field :title %>
+  <br></br>
+
+  
+
+
+
+
 
 
 
