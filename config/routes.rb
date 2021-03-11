@@ -9,12 +9,17 @@ Rails.application.routes.draw do
  get '/signup' => 'users#new'
  post '/signup' => 'users#create'
 
-
- 
+  resources :shows do 
+    resources :costumes, only: [:index, :new, :create]
+  end
+  
   resources :pieces
   resources :costumes
-  resources :actors
-  resources :shows
+ 
+  resources :actors do
+    resources :costumes, only: [:index, :new, :create]
+  end
+ 
   resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+ 
 end

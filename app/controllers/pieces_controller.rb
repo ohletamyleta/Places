@@ -10,7 +10,6 @@ class PiecesController < ApplicationController
 
   def create 
     @piece = Piece.new(piece_params)
-    #byebug
     if @piece.save
       redirect_to piece_path(@piece)
     else
