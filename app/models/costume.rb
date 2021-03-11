@@ -2,7 +2,7 @@ class Costume < ApplicationRecord
  
   belongs_to :user
   has_many :pieces
-  has_many :shows, thorugh: :pieces
+  has_many :shows, through: :pieces
 
   validates :name, :notes, presence: true
   
