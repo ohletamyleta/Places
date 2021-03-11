@@ -2,12 +2,13 @@
 
 <% @pieces.each do |piece| %>
   <div>
-  <h3><%= link_to piece.name, piece_path(piece) %> </h3>
-  <p><%= piece.category %></p>
-  <p><%= piece.color%> </p>
-  <p><%= piece.time_period %></p>
-  <p> piece.storage_location %></p>
-  <p> piece.storage_location %></p>
-  <p> piece.notes %></p>
+  <h3>Name: <%= link_to piece.name, piece_path(piece) %> </h3>
+  <p>Category: <%= piece.category %></p>
+  <p>Color: <%= piece.color%> </p>
+  <p>Time Period: <%= piece.time_period %></p>
+  <p>Ok To Alter?: <%=  piece.ok_to_alter %></p>
+  <p>Storage Location: <%=  piece.storage_location %></p>
+  <p>Cleaning Method: <%=  piece.cleaning_method %></p>
+  <p>Notes: <%=  piece.notes %></p>
   </div><br>
   <% end %>
