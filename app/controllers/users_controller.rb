@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-
+  skip_before_action :redirect_if_not_logged_in, only: [:new, :create]
+  
   def index 
     @user = User.find_by(id: params[:id])
     @shows = current_user.shows.order_alpha
