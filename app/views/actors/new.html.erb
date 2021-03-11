@@ -1,14 +1,3 @@
 <h1>Add a New Actor!</h1>
-
-<% if @actor.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@actor.errors.count, "error") %> prohibited this actor from being saved:</h2>
-
-    <ul>
-      <% @actor.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<%= render partial: "layouts/errors", locals: { object: @user } %>
 <%= render 'form' %>
