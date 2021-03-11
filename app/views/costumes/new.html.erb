@@ -3,17 +3,19 @@
 <%= render partial: "layouts/errors", locals: { object: @costume } %>
 
 <%= form_for [@show,@costume] do |f| %>
-  <%= f.label :date %>
-  <%= f.date_field :date %>
-  <%= f.label :feeling %>
-  <%= f.text_field :feeling %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
   <br></br>
 
-  <%= f.label :race_id %>
-  <%= f.collection_select :race_id, current_user.races, :id, :title    %>
+  <%= f.label :piece_id %>
+  <%= f.collection_select :piece_id, current_user.races, :id, :title    %>
 
   <br></br>
+
+  <%= f.label :notes %>
+  <%= f.text_area :notes %>
 
   <%= show_form_option(f) %>
   <%= f.submit%>
