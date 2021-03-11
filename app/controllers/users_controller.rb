@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
   def index 
-    #no need for a users list 
+    @user = User.find_by(id: params[:id])
+    @shows = current_user.shows.order_alpha
   end
 
   def new
@@ -20,6 +21,7 @@ class UsersController < ApplicationController
 
   def show 
     @user = User.find_by(id: params[:id])
+    @shows = current_user.shows.order_alpha
   end 
 
   private

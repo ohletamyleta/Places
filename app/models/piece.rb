@@ -12,7 +12,7 @@ class Piece < ApplicationRecord
     costume_params[:name].empty? ? self.costume : self.costume = costume
   end 
 
-  scope :top, -> { where(category: top) }
+  scope :top, -> { where(category: 'top') }
 
 #Book.where("title = ?", params[:title])
 

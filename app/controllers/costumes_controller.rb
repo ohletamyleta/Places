@@ -4,7 +4,6 @@ class CostumesController < ApplicationController
   def index
     @costumes = Costume.all
     @show = Show.find_by(id: params[:id])
- # Need to figure out how to get the show title in here!
   end
 
   def new
@@ -41,7 +40,7 @@ class CostumesController < ApplicationController
   private
 
     def costume_params
-      params.require(:costume).permit(:show_id, :actor_id, :notes, :active, :costume_id)
+      params.require(:costume).permit(:show_id, :actor_id, :notes, :active, :piece_id)
     end 
 
     def set_costume
