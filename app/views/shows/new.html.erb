@@ -1,14 +1,4 @@
 <h1> Create a New Show </h1>
 
-<% if @show.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@show.errors.count, "error") %> prohibited this show from being saved:</h2>
-
-    <ul>
-      <% @show.errors.each do |error| %>
-        <li><%= error.full_message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<%= render partial: "layouts/errors", locals: { object: @user } %>
 <%= render "form" %>
