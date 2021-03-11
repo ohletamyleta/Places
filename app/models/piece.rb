@@ -12,13 +12,7 @@ class Piece < ApplicationRecord
     costume_params[:name].empty? ? self.costume : self.costume = costume
   end 
 
-
-  # changed relationships so this is the join table
-  # has_many :shows, through: :costumes
-  # has_many :actors, through: :costumes 
-
-
-#working on returning pieces by color or by category (using Scope Methods)
+  scope :top, -> { where(category: top) }
 
 #Book.where("title = ?", params[:title])
 

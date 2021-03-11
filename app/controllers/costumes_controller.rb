@@ -3,6 +3,8 @@ class CostumesController < ApplicationController
 
   def index
     @costumes = Costume.all
+    @show = Show.find_by(id: params[:id])
+ # Need to figure out how to get the show title in here!
   end
 
   def new

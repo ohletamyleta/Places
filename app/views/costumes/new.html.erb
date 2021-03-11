@@ -2,22 +2,52 @@
 
 <%= render partial: "layouts/errors", locals: { object: @costume } %>
 
-<%= form_for [@show,@costume] do |f| %>
+<%= form_for @costume do |f| %>
 
   <%= f.label :name %>
   <%= f.text_field :name %>
 
   <br></br>
 
-  <%= f.label :piece_id %>
-  <%= f.collection_select :piece_id, current_user.races, :id, :title    %>
+  <%= f.label :top %>
+  <%= f.collection_select :piece_ids, Piece.top, :id, :name    %>
+
+  <br></br>
+
+  <%= f.label :bottom %>
+  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
+
+  <br></br>
+
+  <%= f.label :full_suit %>
+  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
+
+  <br></br>
+
+  <%= f.label :dress %>
+  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
+
+  <br></br>
+
+  <%= f.label :underwear %>
+  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
+
+  <br></br>
+
+  <%= f.label :outerwear %>
+  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
+
+  <br></br>
+
+  <%= f.label :accessory %>
+  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
 
   <br></br>
 
   <%= f.label :notes %>
   <%= f.text_area :notes %>
 
-  <%= show_form_option(f) %>
+ 
   <%= f.submit%>
 <% end %>
 
