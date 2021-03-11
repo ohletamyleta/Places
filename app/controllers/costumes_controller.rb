@@ -1,7 +1,7 @@
 class CostumesController < ApplicationController
 
   def index
-    @costumes = Costume.all 
+    @costumes = Costume.all
   end
 
   def new
