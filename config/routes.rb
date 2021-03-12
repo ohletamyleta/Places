@@ -10,10 +10,14 @@ Rails.application.routes.draw do
  post '/signup' => 'users#create'
 
   resources :shows do 
-    resources :costumes
+    resources :pieces
   end
   
-  resources :pieces
+  resources :pieces do 
+    resources :costumes, only: [:index, :new, :create]
+  end 
+
+
 
   resources :costumes do
     resources :pieces, only: [:index, :new, :create]
