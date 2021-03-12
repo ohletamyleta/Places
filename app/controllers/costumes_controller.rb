@@ -7,7 +7,7 @@ class CostumesController < ApplicationController
   end
 
   def new
- 
+    @costume = Costume.new
   end
 
   def create 

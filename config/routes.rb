@@ -13,11 +13,7 @@ Rails.application.routes.draw do
     resources :pieces
   end
   
-  resources :pieces do 
-    resources :costumes, only: [:index, :new, :create]
-  end 
-
-
+  resources :pieces
 
   resources :costumes do
     resources :pieces, only: [:index, :new, :create]
