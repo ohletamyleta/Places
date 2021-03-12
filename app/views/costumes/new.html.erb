@@ -12,45 +12,6 @@
 
   <br></br>
 
-  <%= f.label :top %>
-  <%= f.  %>
-
-  <br></br>
-
-  <%= f.label :bottom %>
-  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
-
-  <br></br>
-
-  <%= f.label :full_suit %>
-  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
-
-  <br></br>
-
-  <%= f.label :dress %>
-  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
-
-  <br></br>
-
-  <%= f.label :underwear %>
-  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
-
-  <br></br>
-
-  <%= f.label :outerwear %>
-  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
-
-  <br></br>
-
-  <%= f.label :accessory %>
-  <%= f.collection_select :piece_ids, Piece.all, :id, :name    %>
-
-  <br></br>
-
-  <%= f.label :notes %>
-  <%= f.text_area :notes %>
-  <br></br>
- 
   <%= f.submit%>
 <% end %>
 

@@ -11,7 +11,7 @@ class CostumesController < ApplicationController
   end
 
   def create 
-    @costume = Costume.new(costume_params)
+    @costume = current_user.built_costumes.build(costumes_params)
     if @costume.save
       redirect_to costume_path(@costume)
     else
@@ -22,18 +22,6 @@ class CostumesController < ApplicationController
   def show 
   end 
 
-  # def edit
-  #   @costume = Costume.find(params[:id])
-  # end
-
-  # def update 
-  #   @costume= Costume.find_by(id: params[:id])
-  #   if @costume.update(costume_params)
-  #     redirect_to costume_path(@costume)
-  #   else
-  #    render :edit
-  #   end
-  # end
 
   
 
