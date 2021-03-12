@@ -4,7 +4,7 @@ class Piece < ApplicationRecord
   belongs_to :costume
 
   validates :name, :category, :color, presence: true
-  validates_associated :costume
+  #validates_associated :costume
   
 
   def costume_attributes=(costume_params)
@@ -12,8 +12,15 @@ class Piece < ApplicationRecord
     costume_params[:name].empty? ? self.costume : self.costume = costume
   end 
 
-  scope :top, -> { where(category: 'top') }
+  scope :fits_category, -> (category) {where("category LIKE ?", category)
+  
+  def fits_category(category)
+    where("category LIKE ?", category)
+  end
 
+
+
+  
 #Book.where("title = ?", params[:title])
 
 # class Book < ApplicationRecord
@@ -25,6 +32,6 @@ class Piece < ApplicationRecord
 #   scope :out_of_print_and_expensive, -> { out_of_print.where("price > 500") }
 # end
 
-  
+ 
 
 end
